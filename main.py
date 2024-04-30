@@ -1,4 +1,4 @@
-#! C:\Users\Mayeu\OneDrive\Desktop\BPM\venv\Scripts\python.exe
+
 from math import comb
 import pygame
 import time
@@ -49,7 +49,7 @@ font = pygame.font.Font(None, 50)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 tempo = input("Enter tempo please\n")
 beat_duration = int(60 * 1000 / int(tempo))
-pygame.mixer.music.load("venv/HH Neat.adv.ogg")
+pygame.mixer.music.load("Interactive_Metro/HH Neat.adv.ogg")
 # Initialize boolean values
 metro_on: bool = False
 playing: bool = True
