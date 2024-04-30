@@ -1,8 +1,7 @@
 
 from math import comb
 import pygame
-import time
-import sys
+import os
 
 pygame.init()
 pygame.mixer.init()
@@ -49,7 +48,12 @@ font = pygame.font.Font(None, 50)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 tempo = input("Enter tempo please\n")
 beat_duration = int(60 * 1000 / int(tempo))
-pygame.mixer.music.load("Interactive_Metro/HH Neat.adv.ogg")
+import os
+
+script_dir = os.path.dirname(__file__)
+audio_file_path = os.path.join(script_dir, "HH Neat.adv.ogg")
+pygame.mixer.music.load(audio_file_path)
+
 # Initialize boolean values
 metro_on: bool = False
 playing: bool = True
